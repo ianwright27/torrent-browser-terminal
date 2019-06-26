@@ -2,29 +2,7 @@ import requests as r
 from bs4 import BeautifulSoup
 from os import system
 import time
-
-def refine(data):
-	output = ""
-	for char in data:
-		if char == " ":
-			output += "+"
-		else:
-			output+=char
-	return output
-
-def textFilter(str_):
-	string = ""
-	for ch in str_:
-		if ch == "<":
-			string += "a"
-		elif ch == ">":
-			string += "b"
-		elif ch == "/":
-			string += "c"
-		else:
-			string += ch
-	new_string = string[string.find('S'):string.find(', ULed')]
-	return new_string
+import text_filter.textOperations as text
 
 def parse(url,source_code):
 	source = BeautifulSoup(source_code,'html5lib')
@@ -35,7 +13,7 @@ def parse(url,source_code):
 		link_N_title = title.find('a')
 		desc = row.find('font', {'class':'detDesc'})
 		_size = str(desc)
-		size = textFilter(_size)
+		size = text.textFilter(_size)
 		the_rest = row.find('td', {'align':'right'})
 		extras = []
 		for item in the_rest:
@@ -65,7 +43,7 @@ def main():
 			          ----------------------
 		\n""")
 	__search__ = input('Search > ')
-	search = refine(__search__)
+	search = text.refine(__search__)
 	payload = {'q':search, 'page':0,'orderby':99}
 	url = "https://www.thepiratebay.org/s/"
 	request = r.get(url,params=payload,timeout=60)
