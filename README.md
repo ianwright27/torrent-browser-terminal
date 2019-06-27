@@ -1,6 +1,6 @@
 # torrent-browser-terminal
 ![](torrent-browser1.png)
-![](torrent-browser1.png)
+![](torrent-browser2.png)
 
 
 A python script that browses for torrents online,
