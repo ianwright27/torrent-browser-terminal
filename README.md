@@ -1,6 +1,10 @@
 # torrent-browser-terminal
-![](torrentbrowserpy.png)
+![](torrent-browser1.png)
+![](torrent-browser1.png)
 
 
 A python script that browses for torrents online,
 It requires two major libraries, requests and bs4.
+
+Added functionalities include [fetching the magnet links]
+Still room for perfection.

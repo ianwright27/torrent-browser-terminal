@@ -1,3 +1,6 @@
+#Author : Ian Wright
+#Email: thewian27@gmail.com
+
 import requests as r
 from bs4 import BeautifulSoup
 from os import system
@@ -95,4 +98,3 @@ try:
 	main()
 except Exception as e:
 	print(f'{e}\t> Try Again')
-	#time.sleep(2)
