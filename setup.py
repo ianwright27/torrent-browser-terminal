@@ -11,7 +11,6 @@ for app in dependencies:
 	os.system(command)
 
 cwd = os.getcwd()
-#/home/ian/Desktop
 
 remove_home = cwd[cwd.find('/home/')+6:]
 the_rest = remove_home[remove_home.find('/'):]
