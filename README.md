@@ -1,3 +1,4 @@
+### No boring ads
 # torrent-browser-terminal
 ![](torrent-browser1.png)
 ![](torrent-browser2.png)
